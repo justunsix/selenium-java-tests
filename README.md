@@ -13,20 +13,23 @@ Run quick tests with Selenium and Java
 
 ## Getting Started
 
-To get a local copy up and running by following these steps.
+To get a local copy up and running by following these steps. 
 
 ### Prerequisites
 
-Clone this repository to your local computer
-```sh
-git clone https://github.com/justintungonline/selenium-java-tests.git
-````
+Follow the steps below OR you can instantly start coding with Gitpod in your browsers.
 
-[Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) - Set your `JAVA_HOME` environment variable to point to Java folder and add the JDK's bin folder to your `path` environment variable
+#### Instant Environment in Browser Option
 
-[Install Maven](https://maven.apache.org/install.html) - add bin folder to your `path` environment variable
+Gitpod is an online dev environment based on VS Code/Theia and can launch ready-to-code development environments for GitHub projects with a single click. It is free for open source projects like this one. You can open <https://gitpod.io/#https://github.com/justintungonline/selenium-java-tests> or push the Gitpod ready-to-code button at the top of this README.
 
-### Installation
+#### Install Locally Option
+
+1. Clone this repository to your local computer using `git clone https://github.com/justintungonline/selenium-java-tests.git`.
+2. [Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) - Set your `JAVA_HOME` environment variable to point to Java folder and add the JDK's bin folder to your `path` environment variable.
+3. [Install Maven](https://maven.apache.org/install.html) - add Maven's bin folder to your `path` environment variable.
+
+### Installation and Run
 
 Confirm installations and pathes are setup in a terminal
 
