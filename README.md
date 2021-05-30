@@ -13,17 +13,22 @@ Run quick tests with Selenium and Java
 
 ## Getting Started
 
-To get a local copy up and running follow these steps.
+To get a local copy up and running by following these steps.
 
 ### Prerequisites
 
-- Clone this repository to your local `git clone https://github.com/justintungonline/selenium-java-tests.git'
-- [Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) - Set your `JAVA_HOME` environment variable to point to Java and add the JDK's bin folder to your `path` environment variable
-- [Install Maven](https://maven.apache.org/install.html) - add bin folder to your `path` environment variable
+Clone this repository to your local computer
+```sh
+git clone https://github.com/justintungonline/selenium-java-tests.git
+````
 
-## Installation
+[Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) - Set your `JAVA_HOME` environment variable to point to Java folder and add the JDK's bin folder to your `path` environment variable
 
-Confirm installations and path in terminal and initialize a Maven Java project
+[Install Maven](https://maven.apache.org/install.html) - add bin folder to your `path` environment variable
+
+### Installation
+
+Confirm installations and pathes are setup in a terminal
 
 ```sh
 # Maven
@@ -42,6 +47,8 @@ mvn package
 # Run main method in class App
 java -cp target/training-1.0-SNAPSHOT.jar training.App
 ```
+
+After running it you will see `Hello World` printed in the terminal.
 
 ## Usage
 
@@ -76,6 +83,7 @@ Project Link: [https://github.com/justintungonline/selenium-java-tests](https://
 
 ## Acknowledgements
 
+- [Best-README-Template: A README template to jumpstart projects](https://github.com/othneildrew/Best-README-Template/)
 
 ## Appendix: Example Windows Setup to Meet Installation Requirements
 
