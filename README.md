@@ -4,7 +4,7 @@
 
 ## About The Project
 
-Run quick tests with Selenium and Java
+Template project to run tests with Selenium and Java.
 
 ### Built with
 
