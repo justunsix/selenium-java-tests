@@ -21,7 +21,7 @@ Choose an option below. You can develop in your browser or locally.
 
 #### Option 1. Development Environment in Browser
 
-Gitpod is an online dev environment based on VS Code/Theia and can launch ready-to-code development environments for GitHub projects with a single click. It is free for open source projects like this one and a nice way to sharing code with others. You can open <https://gitpod.io/#https://github.com/justintungonline/selenium-java-tests> or push the Gitpod ready-to-code button at the top of this README.
+[Gitpod](https://www.gitpod.io/features) is an online dev environment based on VS Code/Theia and can launch ready-to-code development environments for GitHub projects with a single click. It is free for open source projects like this one and a nice way to sharing code with others. You can open <https://gitpod.io/#https://github.com/justintungonline/selenium-java-tests> or push the Gitpod ready-to-code button at the top of this README.
 
 #### Option 2. Install Locally
 
@@ -45,6 +45,8 @@ java -version
 Build and run the project
 
 ```sh
+
+cd training
 mvn package
 
 # Run main method in class App
