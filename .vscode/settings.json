@@ -1,3 +1,23 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.configuration.runtimes": [
+        {
+             "name": "JavaSE-1.8",
+             "path": "C:\\usr\\bin\\PortableApps\\PortableApps\\CommonFiles\\Java64"
+        },
+        {
+             "name": "JavaSE-1.8",
+             "path": "C:\\usr\\bin\\\\PortableApps\\PortableApps\\CommonFiles\\JDK64",
+             "sources": "/usr/local/jdk-11.0.3/lib/src.zip",
+             "javadoc": "https://docs.oracle.com/javase/8/docs/api/",
+             "default": true
+        },
+        {
+             <!-- Install with VS Code Java quickstart -->
+             "name": "JavaSE-11",
+             "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot",
+             "sources": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot\\lib\\src.zip",
+             "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api/",
+             "default": true
+        }
 }
