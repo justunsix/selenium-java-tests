@@ -13,7 +13,7 @@ Template project to run tests with Selenium and Java.
 
 ## Getting Started
 
-Get a local copy up and running by following these steps. 
+Get a local copy up and running by following these steps.
 
 ### Prerequisites
 
@@ -57,7 +57,8 @@ After running it you will see `Hello World` printed in the terminal.
 
 ## Usage
 
-Placeholders: 
+Placeholders:
+
 - Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 - For more examples, please refer to the Documentation
 
