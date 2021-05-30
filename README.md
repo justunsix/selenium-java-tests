@@ -93,12 +93,42 @@ Project Link: [https://github.com/justintungonline/selenium-java-tests](https://
 ## Appendix: Example Windows Setup to Meet Installation Requirements
 
 - [VS Code with Java Extensions](https://code.visualstudio.com/docs/java/java-tutorial) per VS Code Java Tutorial
+- [VS Code Java Linting](https://code.visualstudio.com/docs/java/java-linting) - formatter, problem and vulnerability analysis
 - Install JDK in VS Code quickstrart or separate installation like [JDK 64 Portable (Windows)](https://portableapps.com/apps/utilities/jdkportable64).
 
-## Appendix: How this Repoistory was Set up
+## Appendix: How this repository was set up
 
 Initialize project in this repository's folder using a Maven quickstart template
 
-```sh 
+```sh
 mvn archetype:generate -DgroupId=training -DartifactId=training -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+```
+
+Add [Selenium's dependency](https://www.selenium.dev/maven/) to Maven's pom. Added firefox driver for testing. Other  WebDrivers can be added.
+
+## Appendix: Possible VS Code Java Settings
+
+### Settings.json
+
+```json
+    "java.configuration.runtimes": [
+        {
+             "name": "JavaSE-1.8",
+             "path": "C:\\usr\\bin\\Java64"
+        },
+        {
+             "name": "JavaSE-1.8",
+             "path": "C:\\usr\\bin\\\\JDK64",
+             "sources": "/usr/local/jdk-11.0.3/lib/src.zip",
+             "javadoc": "https://docs.oracle.com/javase/8/docs/api/",
+             "default": true
+        },
+        {
+             <!-- Installed with VS Code Java quickstart -->
+             "name": "JavaSE-11",
+             "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot",
+             "sources": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot\\lib\\src.zip",
+             "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api/",
+             "default": true
+        }
 ```

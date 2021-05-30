@@ -24,6 +24,17 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- Per https://www.selenium.dev/maven/ -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <version>3.141.59</version>
+  </dependency>
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>htmlunit-driver</artifactId>
+    <version>2.33.2</version>
+</dependency>  
   </dependencies>
 
   <build>
