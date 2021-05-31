@@ -27,10 +27,12 @@ public class AppExample {
     public static void main(String[] args) {
 
         // Optional. If not specified, WebDriver searches the PATH for chromedriver
-        // System.setProperty("webdriver.chrome.driver", "C:\\Users\\justi\\Downloads\\chrome\\chromedriver_win32-91");
+        // System.setProperty("webdriver.chrome.driver",
+        // "C:\\Users\\jto\\Downloads\\chrome\\chromedriver_win32-91");
 
         // ChromeOptions options = new ChromeOptions();
-        // Optional. Sets a non-standard location for Chrome, not required if Chrome is installed in a standard location
+        // Optional. Sets a non-standard location for Chrome, not required if Chrome is installed in
+        // a standard location
         // options.setBinary("C:\\Users\\justi\\Downloads\\chrome\\GoogleChromePortable\\App\\Chrome-bin");
         // WebDriver driver = new ChromeDriver(options);
 
@@ -41,17 +43,17 @@ public class AppExample {
         // GET request to site
         driver.get(url);
 
-        // WebDriverWait wait = new WebDriverWait(driver, 10);
-        // WebElement testingLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Testing")));
-
         WebElement testingLink = driver.findElement(By.partialLinkText("Testing"));
         System.out.println(testingLink.toString());
 
-        // elementInteraction(driver);
-        // mouseAndKeyboard(driver);
-        // browserInteraction(driver);
-        // otherInteractions(driver);
-        
+        /* Tutorial Code */
+        if (false) {
+            elementInteraction(driver);
+            mouseAndKeyboard(driver);
+            browserInteraction(driver);
+            otherInteractions(driver);
+        }
+
         System.out.println("=== Test Driver Complete ===");
 
         // Quitting the Driver - It is important to quit the driver at the end of the program:
@@ -62,7 +64,8 @@ public class AppExample {
          * doesn't destroy the WebDriver object. The quit() method is more appropriate when you no
          * longer need the browser.
          */
-        
+
+        System.exit(0);
     }
 
     /**
@@ -152,7 +155,6 @@ public class AppExample {
 
         // Delete a cookie:
         driver.manage().deleteCookie(mySavedCookie);
-
     }
 
     /**
@@ -202,6 +204,12 @@ public class AppExample {
         // Locating Elements via partialLinkText - e.g. <a
         // href="">random-text-xyz-i-wont-change-random-digit-123</a>
         WebElement iWontChangeLink = driver.findElement(By.partialLinkText("i-wont-change"));
+
+        // Wait until load for slow element loading
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement testingLink = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Testing")));
+
 
         /*
          * Locating Elements via tagName like <a>, <div>, there may be multiple elements with the

@@ -57,7 +57,7 @@ cd training
 mvn package
 
 # Run main method in class AppExample
-mvn exec:java -Dexec.mainClass="training.AppExample" -Dexec.cleanupDaemonThreads=false
+mvn exec:java -Dexec.mainClass="training.AppExample"
 
 ```
 
@@ -154,4 +154,7 @@ java -cp target/base-1.0-SNAPSHOT.jar base.BaseTests
 
 # Execute a single unitTest method in BaseTests testing class
 mvn -Dtest=BaseTests#unitTest test
+
+# Run main testing class, cleanupDaemonThreads is required otherwise there is a java.lang.IllegalThreadStateException or use System.exit(0); at the end of the program
+mvn exec:java -Dexec.mainClass="training.AppExample" -Dexec.cleanupDaemonThreads=false
 ```
