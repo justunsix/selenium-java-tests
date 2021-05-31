@@ -64,8 +64,7 @@ Placeholders:
 
 ## Roadmap
 
-1. Walkthrough [Web Browser Automation](https://stackabuse.com/web-browser-automation-with-selenium-and-java/) and use examples.
-2. Follow course [Seleium Webdriver Java course](https://github.com/angiejones/selenium-webdriver-java-course) and try code here.
+- Follow course [Seleium Webdriver Java course](https://github.com/angiejones/selenium-webdriver-java-course) and try code here.
 
 ## Contributing
 
@@ -90,6 +89,7 @@ Project Link: [https://github.com/justintungonline/selenium-java-tests](https://
 ## Acknowledgements
 
 - [Best-README-Template: A README template to jumpstart projects](https://github.com/othneildrew/Best-README-Template/)
+- Java code samples from [Web Browser Automation with Selenium and Java](https://stackabuse.com/web-browser-automation-with-selenium-and-java/) by Shadab Ansari
 
 ## Appendix: Example Windows Setup to Meet Installation Requirements
 
