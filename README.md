@@ -9,7 +9,9 @@ Template project to run tests with Selenium and Java.
 ### Built with
 
 - [Selenium](https://www.selenium.dev/)
-- [Java](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Chrome driver](https://sites.google.com/chromium.org/driver/getting-started)
+and Chrome browser for your platform. The driver must match with the browser version.
+- [Java SE 10+](https://www.oracle.com/java/technologies/javase-downloads.html)
 
 ## Getting Started
 
@@ -23,11 +25,16 @@ Choose an option below. You can develop in your browser or locally.
 
 [Gitpod](https://www.gitpod.io/features) is an online dev environment based on VS Code/Theia and can launch ready-to-code development environments for GitHub projects with a single click. It is free for open source projects like this one and a nice way to sharing code with others. You can open <https://gitpod.io/#https://github.com/justintungonline/selenium-java-tests> or push the Gitpod ready-to-code button at the top of this README.
 
+This option right now is only useful for development. To run the tests, a local installation is recommended since it requires a Chrome browser installed.
+
 #### Option 2. Install Locally
 
 1. Clone this repository to your local computer using `git clone https://github.com/justintungonline/selenium-java-tests.git`.
 2. [Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) - Set your `JAVA_HOME` environment variable to point to Java folder and add the JDK's bin folder to your `path` environment variable.
 3. [Install Maven](https://maven.apache.org/install.html) - add Maven's bin folder to your `path` environment variable.
+4. Install [Chrome](https://www.google.com/intl/en_ca/chrome/) and the [Chrome driver](https://sites.google.com/chromium.org/driver/getting-started), making sure the versions match. [Web Driver Manager](https://github.com/bonigarcia/webdrivermanager) is an alternative and efficient way to manage this part; however, this repository does not use it as a dependency.
+   1. Add the chrome driver folder to your 'path' environment variable.
+   2. Open your Chrome browser to check it works. If Chrome opens up as a black screen [disable hardware acceleration using this workaround](https://support.google.com/chrome/thread/17216800/completely-black-screen-when-opening-chrome?hl=en&msgid=23887976#).
 
 ### Installation and Run
 
@@ -49,11 +56,17 @@ Build and run the project
 cd training
 mvn package
 
-# Run main method in class App
-java -cp target/training-1.0-SNAPSHOT.jar training.App
+# Run main method in class AppExample
+mvn exec:java -Dexec.mainClass="training.AppExample" -Dexec.cleanupDaemonThreads=false
+
 ```
 
-After running it you will see `Hello World` printed in the terminal.
+After running it, Chrome will briefly open and visit <https://the-internet.herokuapp.com/> and then close. You will see something like below in the terminal indicating the driver visited and got a link text meaning the run was successful.
+
+```log
+[[ChromeDriver: chrome on WINDOWS (d40a87asdas31c6a93304e19e3)] -> partial link text: Testing]
+=== Test Driver Complete ===
+```
 
 ## Usage
 
@@ -91,12 +104,6 @@ Project Link: [https://github.com/justintungonline/selenium-java-tests](https://
 - [Best-README-Template: A README template to jumpstart projects](https://github.com/othneildrew/Best-README-Template/)
 - Java code samples from [Web Browser Automation with Selenium and Java](https://stackabuse.com/web-browser-automation-with-selenium-and-java/) by Shadab Ansari
 
-## Appendix: Example Windows Setup to Meet Installation Requirements
-
-- [VS Code with Java Extensions](https://code.visualstudio.com/docs/java/java-tutorial) per VS Code Java Tutorial
-- [VS Code Java Linting](https://code.visualstudio.com/docs/java/java-linting) - formatter, problem and vulnerability analysis
-- Install JDK in VS Code quickstrart or separate installation like [JDK 64 Portable (Windows)](https://portableapps.com/apps/utilities/jdkportable64).
-
 ## Appendix: How this repository was set up
 
 Initialize project in this repository's folder using a Maven quickstart template
@@ -105,11 +112,17 @@ Initialize project in this repository's folder using a Maven quickstart template
 mvn archetype:generate -DgroupId=training -DartifactId=training -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
-Add [Selenium's dependency](https://www.selenium.dev/maven/) to Maven's pom. Added firefox driver for testing. Other  WebDrivers can be added.
+Add [Selenium's dependency](https://www.selenium.dev/maven/) to Maven's pom. Added [Chrome driver dependency from MVN](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver/3.141.59) for testing. Other  WebDrivers can be added.
 
-## Appendix: Possible VS Code Java Settings
+## Appendix: Example Windows Setup to Meet Installation Requirements
 
-### Settings.json
+- [IntelliJ](https://www.jetbrains.com/idea/) or [VS Code with Java Extensions](https://code.visualstudio.com/docs/java/java-tutorial) per VS Code Java Tutorial and [VS Code Java Linting](https://code.visualstudio.com/docs/java/java-linting) - formatter, problem and vulnerability analysis
+- Install JDK (in VS Code quickstrart or separate installation like [JDK 64 Portable (Windows)](https://portableapps.com/apps/utilities/jdkportable64)).
+- Install Chrome and Chrome driver for Version 91.0.4472.77 (Official Build) (32-bit).
+
+### Appendix: Other Stuff
+
+#### Settings.json
 
 ```json
     "java.configuration.runtimes": [
@@ -132,4 +145,13 @@ Add [Selenium's dependency](https://www.selenium.dev/maven/) to Maven's pom. Add
              "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api/",
              "default": true
         }
+```
+
+### Alternate run command
+
+```sh
+java -cp target/base-1.0-SNAPSHOT.jar base.BaseTests
+
+# Execute a single unitTest method in BaseTests testing class
+mvn -Dtest=BaseTests#unitTest test
 ```

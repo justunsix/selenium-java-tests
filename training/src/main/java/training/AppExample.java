@@ -11,8 +11,11 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AppExample {
 
@@ -22,21 +25,34 @@ public class AppExample {
     private static final String COMMON_ID = "some-id";
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\justi\\Downloads\\chromedriver_win32");
+
+        // Optional. If not specified, WebDriver searches the PATH for chromedriver
+        // System.setProperty("webdriver.chrome.driver", "C:\\Users\\justi\\Downloads\\chrome\\chromedriver_win32-91");
+
+        // ChromeOptions options = new ChromeOptions();
+        // Optional. Sets a non-standard location for Chrome, not required if Chrome is installed in a standard location
+        // options.setBinary("C:\\Users\\justi\\Downloads\\chrome\\GoogleChromePortable\\App\\Chrome-bin");
+        // WebDriver driver = new ChromeDriver(options);
+
         WebDriver driver = new ChromeDriver();
 
-        String url = "https://stackabuse.com";
+        String url = "https://the-internet.herokuapp.com/";
 
         // GET request to site
         driver.get(url);
 
-        WebElement newsletterEmail = driver.findElement(By.className("required email input-lg"));
-        System.out.println(newsletterEmail.toString());
+        // WebDriverWait wait = new WebDriverWait(driver, 10);
+        // WebElement testingLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Testing")));
+
+        WebElement testingLink = driver.findElement(By.partialLinkText("Testing"));
+        System.out.println(testingLink.toString());
 
         // elementInteraction(driver);
         // mouseAndKeyboard(driver);
         // browserInteraction(driver);
         // otherInteractions(driver);
+        
+        System.out.println("=== Test Driver Complete ===");
 
         // Quitting the Driver - It is important to quit the driver at the end of the program:
         driver.quit();
@@ -46,8 +62,7 @@ public class AppExample {
          * doesn't destroy the WebDriver object. The quit() method is more appropriate when you no
          * longer need the browser.
          */
-
-        System.out.println("=== Test Driver Complete ===");
+        
     }
 
     /**
