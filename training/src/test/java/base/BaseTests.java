@@ -1,26 +1,24 @@
 package base;
 
-import org.openqa.selenium.Dimension;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.HomePage;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import java.util.List;
+import org.junit.Before;
 import org.junit.Test;
 
 public class BaseTests {
 
     private WebDriver driver;
-
+    protected HomePage homePage;
+    
+    @Before
     public void setUp() {
-
-        // Optional. If not specified, WebDriver searches the PATH for chromedriver
-        // System.setProperty("webdriver.chrome.driver",
-        // "C:\\Users\\justi\\Downloads\\chrome\\chromedriver_win32-91");
-
-        // Optional. Sets a non-standard location for Chrome, not required if Chrome is installed in
-        // a standard location
-        // ChromeOptions options = new ChromeOptions();
-        // options.setBinary("C:\\Users\\justi\\Downloads\\chrome\\GoogleChromePortable\\App\\Chrome-bin");
 
         unitTest();
 
@@ -39,24 +37,47 @@ public class BaseTests {
         // Load browser, visit a URL, use a sample app for automation
         driver.get("https://the-internet.herokuapp.com/");
 
-        // Changing sizes of window
+        homePage = new HomePage(driver);
+
+        // Make sure to close the session, it will close the Window
+        driver.quit();
+
+        assertTrue( true );
+
+    }
+
+    public void beginnerUnitTest() {
+        
+        /* Changing sizes of window */
 
         // Example iPhone dimensions
-        driver.manage().window().setSize(new Dimension(375, 812));
+        // driver.manage().window().setSize(new Dimension(375, 812));
         // driver.manage().window().maximize();
         // driver.manage().window().fullscreen();
 
+        // Find all links
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        System.out.println("Found " + links.size() + " links.");
+
+        WebElement inputsLink = driver.findElement(By.linkText("Inputs"));
+        inputsLink.click();
+
         System.out.println("=== Visited: " + driver.getTitle() + "===");
+
+        String searchText = "Angellic";
+        try {
+            inputsLink = driver.findElement(By.linkText(searchText));    
+        } catch (NoSuchElementException e) {
+            System.err.println("No such link " + searchText + " found." );
+        }
+        
 
         if (driver.getTitle().equals("The Internet")) {
             assertTrue( true );
         } else {
-            assertFalse( true );
+            assertFalse(
+                 true );
         }
-        // Make sure to close the session, it will close the Window
-        driver.quit();
-
     }
-
 
 }

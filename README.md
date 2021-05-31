@@ -25,7 +25,7 @@ Choose an option below. You can develop in your browser or locally.
 
 [Gitpod](https://www.gitpod.io/features) is an online dev environment based on VS Code/Theia and can launch ready-to-code development environments for GitHub projects with a single click. It is free for open source projects like this one and a nice way to sharing code with others. You can open <https://gitpod.io/#https://github.com/justintungonline/selenium-java-tests> or push the Gitpod ready-to-code button at the top of this README.
 
-This option right now is only useful for development. To run the tests, a local installation is recommended since it requires a Chrome browser installed.
+This option right now is only useful for development. To run the program, a local installation is recommended since it requires a Chrome browser installed.
 
 #### Option 2. Install Locally
 
@@ -61,7 +61,7 @@ mvn exec:java -Dexec.mainClass="training.AppExample"
 
 ```
 
-After running it, Chrome will briefly open and visit <https://the-internet.herokuapp.com/> and then close. You will see something like below in the terminal indicating the driver visited and got a link text meaning the run was successful.
+After running it, Chrome will briefly open and visit <https://the-internet.herokuapp.com/>, a site for test automation, and then close. You will see something like below in the terminal indicating the driver visited and got a link text meaning the run was successful.
 
 ```log
 [[ChromeDriver: chrome on WINDOWS (d40a87asdas31c6a93304e19e3)] -> partial link text: Testing]
@@ -102,7 +102,7 @@ Project Link: [https://github.com/justintungonline/selenium-java-tests](https://
 ## Acknowledgements
 
 - [Best-README-Template: A README template to jumpstart projects](https://github.com/othneildrew/Best-README-Template/)
-- Java code samples from [Web Browser Automation with Selenium and Java](https://stackabuse.com/web-browser-automation-with-selenium-and-java/) by Shadab Ansari
+- Java code samples from [Web Browser Automation with Selenium and Java](https://stackabuse.com/web-browser-automation-with-selenium-and-java/) by Shadab Ansari for demonstration code in `AppExample.java`
 
 ## Appendix: How this repository was set up
 

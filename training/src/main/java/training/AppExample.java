@@ -46,14 +46,6 @@ public class AppExample {
         WebElement testingLink = driver.findElement(By.partialLinkText("Testing"));
         System.out.println(testingLink.toString());
 
-        /* Tutorial Code */
-        if (false) {
-            elementInteraction(driver);
-            mouseAndKeyboard(driver);
-            browserInteraction(driver);
-            otherInteractions(driver);
-        }
-
         System.out.println("=== Test Driver Complete ===");
 
         // Quitting the Driver - It is important to quit the driver at the end of the program:
@@ -69,7 +61,7 @@ public class AppExample {
     }
 
     /**
-     * Screenshots, JavaScript, Cookies
+     * Selenium Demonstration code for Screenshots, JavaScript, Cookies
      * 
      * @param driver
      */
@@ -158,8 +150,7 @@ public class AppExample {
     }
 
     /**
-     * Follow code examples from
-     * https://stackabuse.com/web-browser-automation-with-selenium-and-java/
+     * Selenium Demonstration code for element interactions from
      * 
      * @param driver
      */
@@ -212,7 +203,8 @@ public class AppExample {
 
 
         /*
-         * Locating Elements via tagName like <a>, <div>, there may be multiple elements with the
+         * Selenium Demonstration code for element interactions for
+         * locating Elements via tagName like <a>, <div>, there may be multiple elements with the
          * same tag Useful if used with findElement on another element which narrows the search
          */
         WebElement tagNameElem = driver.findElement(By.tagName("select"));
@@ -295,7 +287,9 @@ public class AppExample {
 
     }
 
-    /** Mouse and keyboard interactions */
+    /** 
+     * Mouse and keyboard interactions 
+     */
     private static void mouseAndKeyboard(WebDriver driver) {
         // Onstantiate Actions and pass it the WebDriver instance:
         Actions builder = new Actions(driver);
