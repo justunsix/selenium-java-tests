@@ -14,6 +14,7 @@ public class HomePage {
 
     private By formAuthenticationLink = By.linkText("Form Authentication");
     private By dropdownLink = By.linkText("Dropdown");
+    private By forgotPasswordLink = By.linkText("Forgot Password");
     private WebDriver driver;
     
     /**
@@ -39,4 +40,13 @@ public class HomePage {
         driver.findElement(dropdownLink).click();
         return new DropdownPage(driver);
     }
+
+    /**
+     * Follows forget password page
+     */
+    public ForgotPasswordPage clickForgotPasswordLink() {
+        driver.findElement(forgotPasswordLink).click();
+        return new ForgotPasswordPage(driver);
+    }
 }
+

@@ -70,7 +70,9 @@ After running it, Chrome will briefly open and visit <https://the-internet.herok
 
 ## Usage
 
-- Inspect the Java model framework for <https://the-internet.herokuapp.com/> and <https://formy-project.herokuapp.com/> and see and modify test cases for The-Internet site.
+Inspect the Java model framework for <https://the-internet.herokuapp.com/> and <https://formy-project.herokuapp.com/> and see and modify test cases for The-Internet site.
+
+When developing, you may want to download the dependency's source with `mvn dependency:sources` and/or Javadocs with `mvn dependency:resolve -Dclassifier=javadoc`
 
 Placeholders:
 
@@ -124,6 +126,20 @@ Add [Selenium's dependency](https://www.selenium.dev/maven/) to Maven's pom. Add
 - Install Chrome and Chrome driver for Version 91.0.4472.77 (Official Build) (32-bit).
 
 ### Appendix: Other Stuff
+
+#### Download Dependency sources and/or Javadoc
+
+See more options at [Maven download sources javadoc](https://www.baeldung.com/maven-download-sources-javado)c
+
+```sh
+
+mvn dependency:sources
+
+mvn dependency:sources dependency:resolve -Dclassifier=javadoc
+
+```
+
+If using VS Code, ctrl+click into a class and then [right click to attach the source for the dependency](https://github.com/redhat-developer/vscode-java/issues/1855#issuecomment-823142835).
 
 #### Settings.json
 
