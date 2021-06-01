@@ -70,6 +70,8 @@ After running it, Chrome will briefly open and visit <https://the-internet.herok
 
 ## Usage
 
+- Inspect the Java model framework for <https://the-internet.herokuapp.com/> and <https://formy-project.herokuapp.com/> and see and modify test cases for The-Internet site.
+
 Placeholders:
 
 - Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -103,6 +105,7 @@ Project Link: [https://github.com/justintungonline/selenium-java-tests](https://
 
 - [Best-README-Template: A README template to jumpstart projects](https://github.com/othneildrew/Best-README-Template/)
 - Java code samples from [Web Browser Automation with Selenium and Java](https://stackabuse.com/web-browser-automation-with-selenium-and-java/) by Shadab Ansari for demonstration code in `AppExample.java`
+- Test automation site <https://the-internet.herokuapp.com/>
 
 ## Appendix: How this repository was set up
 

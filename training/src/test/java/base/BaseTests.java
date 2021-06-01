@@ -5,33 +5,26 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import pages.HomePage;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
 
 public class BaseTests {
 
     private WebDriver driver;
+
+    /**
+     * Protected so tests that extend this class will have access to it
+     */
     protected HomePage homePage;
     
-    @Before
+    /**
+     * Set up method for to be used as a base for other tests
+     */
+    @BeforeClass
     public void setUp() {
 
-        unitTest();
-
-    }
-
-    public static void main(String args[]) {
-        BaseTests test = new BaseTests();
-        test.setUp();
-    }
-
-    @Test
-    public void unitTest() {
-        
         driver = new ChromeDriver();
 
         // Load browser, visit a URL, use a sample app for automation
@@ -39,11 +32,21 @@ public class BaseTests {
 
         homePage = new HomePage(driver);
 
+    }
+
+    /**
+     * Tear down method to clean up anything after tests are run
+     */
+    @AfterClass
+    public void tearDown () {
         // Make sure to close the session, it will close the Window
         driver.quit();
+    }
 
-        assertTrue( true );
-
+    public static void main(String args[]) {
+        BaseTests test = new BaseTests();
+        test.setUp();
+        test.beginnerUnitTest();
     }
 
     public void beginnerUnitTest() {
@@ -69,14 +72,6 @@ public class BaseTests {
             inputsLink = driver.findElement(By.linkText(searchText));    
         } catch (NoSuchElementException e) {
             System.err.println("No such link " + searchText + " found." );
-        }
-        
-
-        if (driver.getTitle().equals("The Internet")) {
-            assertTrue( true );
-        } else {
-            assertFalse(
-                 true );
         }
     }
 
