@@ -19,8 +19,13 @@ public class ForgotPasswordPage {
  
      public EmailSentPage clickRetrievePasswordButton() {
          // temporary workaround due to website error
-         // driver.findElement(retrievePasswordButton).click(): 
          driver.get("https://the-internet.herokuapp.com/email_sent");
          return new EmailSentPage(driver);
      }
+
+      
+     public EmailSentPage clickRetrievePasswordButtonWithOutBuSentPage() {
+        driver.findElement(retrievePasswordButton).click();
+        return new EmailSentPage(driver);
+    }
 }

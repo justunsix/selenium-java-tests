@@ -2,10 +2,9 @@ package base;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.junit.Assert.assertTrue;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Check multiple pages and number of links on last page
@@ -14,12 +13,12 @@ public class ShiftingTest {
 
     private WebDriver driver;
 
-    @Before
+    @BeforeClass
     public void setUp() {
 
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void unitTest() {
 
         driver = new ChromeDriver();
@@ -39,7 +38,7 @@ public class ShiftingTest {
 
         driver.quit();
         
-        assertTrue(links.size() > 1);
+        Assert.assertTrue(links.size() > 1);
     }
 
     public void printLocation() {

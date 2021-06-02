@@ -18,7 +18,7 @@ public class HomePage {
     private WebDriver driver;
     
     /**
-     * Constructor
+     * Constructor for main page with links to different items to test out
      * @param driver Selenium WebDriver
      */
     public HomePage(WebDriver driver) {
@@ -27,6 +27,8 @@ public class HomePage {
 
     /**
      * Follows form auth link
+     * to look at form input and submission for authentication to
+     * secured area
      */
     public LoginPage clickFormAuthentication() {
         driver.findElement(formAuthenticationLink).click();
@@ -35,6 +37,7 @@ public class HomePage {
 
     /**
      * Follows dropdown page
+     * to look at dropdown selection and input
      */
     public DropdownPage clickDropdown() {
         driver.findElement(dropdownLink).click();
@@ -43,10 +46,26 @@ public class HomePage {
 
     /**
      * Follows forget password page
+     * to look at form input and submission
      */
     public ForgotPasswordPage clickForgotPasswordLink() {
         driver.findElement(forgotPasswordLink).click();
         return new ForgotPasswordPage(driver);
     }
+
+    /**
+     * Follow Hovers page for look at hover on with mouse functionality
+     * @return
+     */
+    public HoversPage clickHovers() {
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
+
+    private void clickLink(String linkName) {
+        driver.findElement(By.linkText(linkName)).click();
+    }
+
+    
 }
 
