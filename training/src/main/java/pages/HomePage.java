@@ -3,12 +3,10 @@ package pages;
 import org.openqa.selenium.*;
 
 /**
- * Framework page to build a Page Object Model design pattern 
- * like getting elements, clicking buttons, etc. This frees up the 
- * test classes to focus on testing rather than page object models.
+ * Framework page to build a Page Object Model design pattern like getting elements, clicking
+ * buttons, etc. This frees up the test classes to focus on testing rather than page object models.
  * 
- * In other words, Selenium work is primarily in the framework classes
- * and not the test cases.
+ * In other words, Selenium work is primarily in the framework classes and not the test cases.
  */
 public class HomePage {
 
@@ -16,9 +14,10 @@ public class HomePage {
     private By dropdownLink = By.linkText("Dropdown");
     private By forgotPasswordLink = By.linkText("Forgot Password");
     private WebDriver driver;
-    
+
     /**
      * Constructor for main page with links to different items to test out
+     * 
      * @param driver Selenium WebDriver
      */
     public HomePage(WebDriver driver) {
@@ -26,9 +25,8 @@ public class HomePage {
     }
 
     /**
-     * Follows form auth link
-     * to look at form input and submission for authentication to
-     * secured area
+     * Follows form auth link to look at form input and submission for authentication to secured
+     * area
      */
     public LoginPage clickFormAuthentication() {
         driver.findElement(formAuthenticationLink).click();
@@ -36,8 +34,7 @@ public class HomePage {
     }
 
     /**
-     * Follows dropdown page
-     * to look at dropdown selection and input
+     * Follows dropdown page to look at dropdown selection and input
      */
     public DropdownPage clickDropdown() {
         driver.findElement(dropdownLink).click();
@@ -45,8 +42,7 @@ public class HomePage {
     }
 
     /**
-     * Follows forget password page
-     * to look at form input and submission
+     * Follows forget password page to look at form input and submission
      */
     public ForgotPasswordPage clickForgotPasswordLink() {
         driver.findElement(forgotPasswordLink).click();
@@ -55,6 +51,7 @@ public class HomePage {
 
     /**
      * Follow Hovers page for look at hover on with mouse functionality
+     * 
      * @return
      */
     public HoversPage clickHovers() {
@@ -62,10 +59,20 @@ public class HomePage {
         return new HoversPage(driver);
     }
 
+    public KeyPressesPage clickKeyPresses() {
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
+
+    public HorizontalSliderPage clickHorizontalSlider() {
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
     private void clickLink(String linkName) {
         driver.findElement(By.linkText(linkName)).click();
     }
 
-    
+
 }
 
