@@ -14,7 +14,7 @@ public class HoverTests extends BaseTests {
 
         Assert.assertTrue(caption.isCaptionDisplayed(), "Caption is not displayed");
         Assert.assertEquals(caption.getTitle(), "name: user1", "Caption title incorrect");
-        Assert.assertEquals(caption.getLink().endsWith("users/1"), "Link Incorrect");
+        Assert.assertTrue(caption.getLink().endsWith("/users/1"), "Link Incorrect");
 
     }
 }
