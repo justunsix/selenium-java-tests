@@ -35,7 +35,7 @@ public class HoversPage {
          * Action uses a builder pattern where methods can be queue and it
          * can execute them all at once
          */
-        Actions actions = new Actions(driver);
+        var actions = new Actions(driver);
         actions.moveToElement(figure).perform();
 
         return new FigureCaption(figure.findElement(boxCaption));
