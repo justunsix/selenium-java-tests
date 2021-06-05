@@ -164,6 +164,10 @@ If using VS Code, ctrl+click into a class and then [right click to attach the so
              "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api/",
              "default": true
         }
+        // Sonarlint: selenium-java-tests project binding, make sure to configure the connection in your workspace settings or global settings
+             "sonarlint.connectedMode.project": {
+             "projectKey": "selenium-java-tests"
+        }
 ```
 
 ### Alternate run command
