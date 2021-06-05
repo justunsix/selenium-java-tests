@@ -6,8 +6,9 @@
   <groupId>swiftiris</groupId>
   <artifactId>training</artifactId>
   <version>1.0-SNAPSHOT</version>
-
   <name>training</name>
+  <description>Template project to run tests with Selenium and Java</description>
+  <inceptionYear>2021</inceptionYear>
   <url>https://github.com/justintungonline/selenium-java-tests</url>
 
   <properties>
