@@ -122,14 +122,14 @@ Add [Selenium's dependency](https://www.selenium.dev/maven/) to Maven's pom. Add
 ## Appendix: Example Windows Setup to Meet Installation Requirements
 
 - [IntelliJ](https://www.jetbrains.com/idea/) or [VS Code with Java Extensions](https://code.visualstudio.com/docs/java/java-tutorial) per VS Code Java Tutorial and [VS Code Java Linting](https://code.visualstudio.com/docs/java/java-linting) - formatter, problem and vulnerability analysis
-- Install JDK (in VS Code quickstrart or separate installation like [JDK 64 Portable (Windows)](https://portableapps.com/apps/utilities/jdkportable64)).
+- Install JDK (in VS Code quickstrart or separate installation like [JDK 64 Portable (Windows)](https://portableapps.com/apps/utilities/jdkportable64).
 - Install Chrome and Chrome driver for Version 91.0.4472.77 (Official Build) (32-bit).
 
 ### Appendix: Other Stuff
 
 #### Download Dependency sources and/or Javadoc
 
-See more options at [Maven download sources javadoc](https://www.baeldung.com/maven-download-sources-javado)c
+See more options at [Maven download sources javadoc](https://www.baeldung.com/maven-download-sources-javadoc)
 
 ```sh
 
@@ -170,14 +170,18 @@ If using VS Code, ctrl+click into a class and then [right click to attach the so
         }
 ```
 
-### Alternate run command
+### Other commands
 
 ```sh
+# Run a single class
 java -cp target/base-1.0-SNAPSHOT.jar base.BaseTests
 
-# Execute a single unitTest method in BaseTests testing class
+# Execute a single method called unitTest in BaseTests testing class
 mvn -Dtest=BaseTests#unitTest test
 
 # Run main testing class, cleanupDaemonThreads is required otherwise there is a java.lang.IllegalThreadStateException or use System.exit(0); at the end of the program
 mvn exec:java -Dexec.mainClass="training.AppExample" -Dexec.cleanupDaemonThreads=false
+
+# Build, test and scan code for upload to sonarcloud.io (requires access to the project in Sonar Cloud)
+mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 ```
