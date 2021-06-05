@@ -157,7 +157,7 @@ If using VS Code, ctrl+click into a class and then [right click to attach the so
              "default": true
         },
         {
-             <!-- Installed with VS Code Java quickstart -->
+             // Installed with VS Code Java quickstart 
              "name": "JavaSE-11",
              "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot",
              "sources": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.11.9-hotspot\\lib\\src.zip",
