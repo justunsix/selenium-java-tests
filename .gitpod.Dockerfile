@@ -9,7 +9,6 @@ RUN sudo apt-get update \
     chromium-browser \
  && sudo apt install libnss3 \
  && sudo rm -rf /var/lib/apt/lists/*
-
 RUN cd /home/gitpod
 RUN wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip \ 
 && unzip chromedriver_linux64.zip \  
