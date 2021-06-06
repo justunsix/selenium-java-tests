@@ -8,7 +8,7 @@ RUN sudo apt-get -q update && \
     sudo apt install libnss3 -y && \
     sudo rm -rf /var/lib/apt/lists/*
 RUN cd /home/gitpod
-RUN wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip \ 
+RUN wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip && \ 
     unzip chromedriver_linux64.zip && \  
     rm -rf chromedriver_linux64.zip && \  
     sudo chmod +x chromedriver
