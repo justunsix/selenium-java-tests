@@ -5,9 +5,11 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import pages.HomePage;
 import java.util.List;
 
@@ -26,7 +28,9 @@ public class BaseTests {
     @BeforeClass
     public void setUp() {
 
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu", "--remote-debugging-port=9222");
+        driver = new ChromeDriver(options);
 
         // Load browser, visit a URL, use a sample app for automation
         goHome();
@@ -55,6 +59,7 @@ public class BaseTests {
         test.beginnerUnitTest();
     }
 
+    @Test
     public void beginnerUnitTest() {
         
         /* Changing sizes of window */
