@@ -129,3 +129,6 @@ local.properties
 
 # Local History for Visual Studio Code
 .history/
+
+# Project specific
+chromedriver.*

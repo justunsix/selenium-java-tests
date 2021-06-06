@@ -29,7 +29,7 @@ public class BaseTests {
     public void setUp() {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--remote-debugging-port=9222");
+        options.addArguments("--headless", "--disable-gpu", "--remote-debugging-port=9222", "--no-sandbox", "--disable-setuid-sandbox");
         driver = new ChromeDriver(options);
 
         // Load browser, visit a URL, use a sample app for automation
