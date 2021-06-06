@@ -176,8 +176,8 @@ If using VS Code, ctrl+click into a class and then [right click to attach the so
 # Run a single class
 java -cp target/base-1.0-SNAPSHOT.jar base.BaseTests
 
-# Execute a single method called unitTest in BaseTests testing class
-mvn -Dtest=BaseTests#unitTest test
+# Execute a single method called testSuccessfulCloseAndSeeModalLink in ModalEntryAdTests class in src/test
+mvn -Dtest=ModalEntryAdTests#testSuccessfulCloseAndSeeModalLink test
 
 # Run main testing class, cleanupDaemonThreads is required otherwise there is a java.lang.IllegalThreadStateException or use System.exit(0); at the end of the program
 mvn exec:java -Dexec.mainClass="training.AppExample" -Dexec.cleanupDaemonThreads=false

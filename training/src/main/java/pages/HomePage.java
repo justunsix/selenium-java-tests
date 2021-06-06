@@ -80,7 +80,26 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
-    
+    public ModalEntryAdPage clickEntryAd() {
+        clickLink("Entry Ad");
+        return new ModalEntryAdPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenu() {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
+    public WysiwygEditorPage clickWYSIWYGEditor() {
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
+    public FramesPage clickFramesPage() {
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+
     private void clickLink(String linkName) {
         driver.findElement(By.linkText(linkName)).click();
     }
