@@ -7,14 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
-public class DynamicLoadingExample1Page {
+public class DynamicLoadingExample2Page {
 
     private WebDriver driver;
     private By startButton = By.cssSelector("#start button");
     private By loadingIndicator = By.id("loading");
     private By loadedText = By.cssSelector("#finish h4");
 
-    public DynamicLoadingExample1Page(WebDriver driver) {
+    public DynamicLoadingExample2Page(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -28,6 +28,8 @@ public class DynamicLoadingExample1Page {
         /* Wait object the tells maximum time to wait during an interaction
         Other configurations include polling time, exceptions */
 
+        // WebDriverWait wait = new WebDriverWait(driver, 5);
+
         /* Wait for 5 seconds at most and poll every 1 second and ignore
         exceptions if no elements on found */
         FluentWait wait = new FluentWait(driver)
@@ -37,8 +39,7 @@ public class DynamicLoadingExample1Page {
         
         // Wait at maximum wait time specificed above or if condition is 
         // satisfied - in this case the loading indicator becomes invisible
-        wait.until(ExpectedConditions.invisibilityOf(
-            driver.findElement(loadingIndicator)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loadedText));
 
     }
 

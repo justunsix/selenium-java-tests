@@ -16,4 +16,14 @@ public class WaitTests extends BaseTests {
         Assert.assertEquals(text, "Hello World!", "Loading text incorrect"); 
     } 
 
+    @Test
+    public void testWaitUntilVisible() {
+
+        var loadingPage = homePage.clickDynamicLoading().clickExample2();
+        loadingPage.clickStart();
+        String text = loadingPage.getLoadingText();
+
+        Assert.assertEquals(text, "Hello World!", "Loading text incorrect"); 
+    } 
+
 }
