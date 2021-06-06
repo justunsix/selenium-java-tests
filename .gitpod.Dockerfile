@@ -1,5 +1,4 @@
 FROM gitpod/workspace-full
-FROM selenium/standalone-chrome-debug
 
 # install Chrome per https://github.com/JesterOrNot/Gitpod-Chrome/blob/master/.gitpod.Dockerfile
 USER gitpod
