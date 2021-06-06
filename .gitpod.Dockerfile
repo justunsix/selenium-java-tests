@@ -7,7 +7,7 @@ USER gitpod
 RUN sudo apt-get update \
  && sudo apt-get install -y \
     chromium-browser \
- && sudo apt install libnss3 \
+ && sudo apt install libnss3 -y \
  && sudo rm -rf /var/lib/apt/lists/*
 RUN cd /home/gitpod
 RUN wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip \ 
