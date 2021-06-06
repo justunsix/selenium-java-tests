@@ -59,7 +59,6 @@ public class BaseTests {
         test.beginnerUnitTest();
     }
 
-    @Test
     public void beginnerUnitTest() {
         
         /* Changing sizes of window */
