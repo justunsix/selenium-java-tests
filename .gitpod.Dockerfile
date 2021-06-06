@@ -14,3 +14,4 @@ RUN wget https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_l
 && unzip chromedriver_linux64.zip \  
 && rm -rf chromedriver_linux64.zip \  
 && sudo chmod +x chromedriver
+ENV PATH=/home/gitpod:$PATH
