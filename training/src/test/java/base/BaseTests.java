@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 import pages.HomePage;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -30,7 +29,7 @@ public class BaseTests {
     public void setUp() {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--remote-debugging-port=9222", "--no-sandbox", "--disable-setuid-sandbox");
+//        options.addArguments("--headless", "--disable-gpu", "--remote-debugging-port=9222", "--no-sandbox", "--disable-setuid-sandbox");
         driver = new ChromeDriver(options);
 
         // Load browser, visit a URL, use a sample app for automation
