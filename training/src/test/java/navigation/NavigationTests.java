@@ -3,7 +3,6 @@ package navigation;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import base.BaseTests;
-import pages.DynamicLoadingPage;
 
 public class NavigationTests extends BaseTests {
     
