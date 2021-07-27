@@ -1,7 +1,9 @@
 package navigation;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import base.BaseTests;
+import pages.DynamicLoadingPage;
 
 public class NavigationTests extends BaseTests {
     
@@ -19,4 +21,11 @@ public class NavigationTests extends BaseTests {
         homePage.clickMultipleWindows().clickHere();
         getWindowManager().switchToTab("New Window");
     }
+
+    @Test
+    public void testNavigatorExample2() {
+        var dynamicLoadingExample2Page = homePage.clickDynamicLoading().controlClickExample2();
+        Assert.assertEquals(dynamicLoadingExample2Page.getStartButtonText(), "Start");
+    }
+
 }

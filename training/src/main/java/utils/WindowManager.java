@@ -1,13 +1,14 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.*;
 
 public class WindowManager {
-    
-    private static final Logger LOGGER = Logger.getLogger( WindowManager.class.getName() );
+
+    private static final Logger LOGGER = Logger.getLogger(WindowManager.class.getName());
 
     private WebDriver driver;
     private WebDriver.Navigation navigate;
@@ -44,26 +45,35 @@ public class WindowManager {
 
         LOGGER.setLevel(Level.INFO);
 
-        LOGGER.log( Level.INFO, "Number of tabs: " + windows.size());
+        LOGGER.log(Level.INFO, "Number of tabs: " + windows.size());
 
-        LOGGER.log( Level.INFO, "Windows handles:");
+        LOGGER.log(Level.INFO, "Windows handles:");
 
         for (Iterator<String> i = windows.iterator(); i.hasNext();) {
             String item = i.next();
-            LOGGER.log( Level.INFO, item);
-        }    
+            LOGGER.log(Level.INFO, item);
+        }
 
-        for (String window : windows){
-            LOGGER.log( Level.INFO, "Switching to window: " + window);
+        for (String window : windows) {
+            LOGGER.log(Level.INFO, "Switching to window: " + window);
             driver.switchTo().window(window);
 
-            LOGGER.log( Level.INFO, "Current window title: " + driver.getTitle());
+            LOGGER.log(Level.INFO, "Current window title: " + driver.getTitle());
 
             // break if iteration on target tab
             if (tabName.equals(driver.getTitle())) {
                 break;
             }
         }
+    }
+
+    /**
+     * @paran tabNumber is number of the tabs starting from 0
+     */
+    public void switchToTab(int tabNumber) {
+        ArrayList<String> openTabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(openTabs.get(tabNumber));
+        LOGGER.log(Level.INFO, "Switching to window handle: " + openTabs.get(tabNumber));
     }
 
 }

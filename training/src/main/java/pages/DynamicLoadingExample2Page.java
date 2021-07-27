@@ -47,6 +47,10 @@ public class DynamicLoadingExample2Page {
         return driver.findElement(loadedText).getText();
     }
 
+    public String getStartButtonText() {
+        return driver.findElement(startButton).getText();
+    }
+
 
 
 
