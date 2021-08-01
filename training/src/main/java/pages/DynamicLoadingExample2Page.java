@@ -13,6 +13,7 @@ public class DynamicLoadingExample2Page {
     private By startButton = By.cssSelector("#start button");
     private By loadingIndicator = By.id("loading");
     private By loadedText = By.cssSelector("#finish h4");
+    private By startButtonId= By.id("start");
 
     public DynamicLoadingExample2Page(WebDriver driver) {
         this.driver = driver;
@@ -48,6 +49,16 @@ public class DynamicLoadingExample2Page {
     }
 
     public String getStartButtonText() {
+        /* Wait for 5 seconds at most and poll every 1 second and ignore
+        exceptions if no elements on found */
+        FluentWait wait = new FluentWait(driver)
+            .withTimeout(Duration.ofSeconds(5))
+            .pollingEvery(Duration.ofSeconds(1))
+            .ignoring(NoSuchElementException.class);
+        
+        // Wait at maximum wait time specificed above or if condition is 
+        // satisfied - in this case the loading indicator becomes invisible
+        wait.until(ExpectedConditions.visibilityOfElementLocated(startButtonId));        
         return driver.findElement(startButton).getText();
     }
 
