@@ -182,6 +182,6 @@ mvn -Dtest=HorizontalSliderTests#testSliding test
 # Run main testing class, cleanupDaemonThreads is required otherwise there is a java.lang.IllegalThreadStateException or use System.exit(0); at the end of the program
 mvn exec:java -Dexec.mainClass="training.AppExample" -Dexec.cleanupDaemonThreads=false
 
-# Build, test and scan code for upload to sonarcloud.io (requires access to the project in Sonar Cloud and connect in environment variable / project settings)
+# Build, test and scan code for upload to sonarcloud.io (requires access to the project in Sonar Cloud and connect in environment variable / project settings > Analysis method > Manual)
 mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 ```
