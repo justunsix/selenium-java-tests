@@ -32,7 +32,7 @@ This option right now is only useful for development. To run the program, a loca
 1. Clone this repository to your local computer using `git clone https://github.com/justintungonline/selenium-java-tests.git`.
 2. [Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) - Set your `JAVA_HOME` environment variable to point to Java folder and add the JDK's bin folder to your `path` environment variable.
 3. [Install Maven](https://maven.apache.org/install.html) - add Maven's bin folder to your `path` environment variable.
-4. Install [Chrome](https://www.google.com/intl/en_ca/chrome/) and the [Chrome driver](https://sites.google.com/chromium.org/driver/getting-started), making sure the versions match. [Web Driver Manager](https://github.com/bonigarcia/webdrivermanager) is an alternative and efficient way to manage this part; however, this repository does not use it as a dependency.
+4. Install [Chrome](https://www.google.com/intl/en_ca/chrome/) in the default location and the [Chrome driver](https://sites.google.com/chromium.org/driver/getting-started), making sure the versions match and add the Chrome driver binary to your `path` environment variable. [Web Driver Manager](https://github.com/bonigarcia/webdrivermanager) is an alternative and efficient way to manage this part; however, this repository does not use it as a dependency.
    1. Add the chrome driver folder to your 'path' environment variable.
    2. Open your Chrome browser to check it works. If Chrome opens up as a black screen [disable hardware acceleration using this workaround](https://support.google.com/chrome/thread/17216800/completely-black-screen-when-opening-chrome?hl=en&msgid=23887976#).
 
