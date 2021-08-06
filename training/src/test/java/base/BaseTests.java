@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import utils.WindowManager;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +23,7 @@ public class BaseTests {
      * Protected so tests that extend this class will have access to it
      */
     protected HomePage homePage;
-    
+
     /**
      * Set up method for to be used as a base for other tests
      */
@@ -30,7 +31,8 @@ public class BaseTests {
     public void setUp() {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--remote-debugging-port=9222", "--no-sandbox", "--disable-setuid-sandbox");
+        options.addArguments("--headless", "--disable-gpu", "--remote-debugging-port=9222",
+                "--no-sandbox", "--disable-setuid-sandbox");
         driver = new ChromeDriver(options);
 
         // Load browser, visit a URL, use a sample app for automation
@@ -39,17 +41,35 @@ public class BaseTests {
         homePage = new HomePage(driver);
 
     }
-    
+
+    @Deprecated
+    public void deprecatedMethod() {
+        return;
+    }
+
     /**
-     * Same as setup, but configures driver to implicitly wait for certain interactions
-     * Careful using implicit waits at the project level
+     * Test Security issue detection in Sonar Lint
+     */
+    public void testSonarLint() {
+        deprecatedMethod();
+        double d = 1.1;
+
+        BigDecimal bd1 = new BigDecimal(d); // Noncompliant; see comment above
+        BigDecimal bd2 = new BigDecimal(1.1); // Noncompliant; same result
+    }
+
+    /**
+     * Same as setup, but configures driver to implicitly wait for certain interactions Careful
+     * using implicit waits at the project level
      */
     public void setUpWithImplicitWait() {
-        
+
         setUp();
 
-        /* Wait at most the time in the arguments for elements to load
-        and if present, interact with them */
+        /*
+         * Wait at most the time in the arguments for elements to load and if present, interact with
+         * them
+         */
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         /* Wait at most the time for page loads before throwing exceptions */
@@ -68,7 +88,7 @@ public class BaseTests {
      * Tear down method to clean up anything after tests are run
      */
     @AfterClass
-    public void tearDown () {
+    public void tearDown() {
         // Make sure to close the session, it will close the Window
         driver.quit();
     }
@@ -84,7 +104,7 @@ public class BaseTests {
     }
 
     public void beginnerUnitTest() {
-        
+
         /* Changing sizes of window */
 
         // Example iPhone dimensions
@@ -103,9 +123,9 @@ public class BaseTests {
 
         String searchText = "Angellic";
         try {
-            inputsLink = driver.findElement(By.linkText(searchText));    
+            inputsLink = driver.findElement(By.linkText(searchText));
         } catch (NoSuchElementException e) {
-            System.err.println("No such link " + searchText + " found." );
+            System.err.println("No such link " + searchText + " found.");
         }
     }
 
