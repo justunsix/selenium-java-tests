@@ -1,6 +1,6 @@
 # Selenium Java Tests
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/selenium-java-tests)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justunsix/selenium-java-tests)
 
 ## About The Project
 
@@ -23,13 +23,13 @@ Choose an option below. You can develop in your browser or locally.
 
 #### Option 1. Development Environment in Browser
 
-[Gitpod](https://www.gitpod.io/features) is an online dev environment based on VS Code/Theia and can launch ready-to-code development environments for GitHub projects with a single click. It is free for open source projects like this one and a nice way to sharing code with others. You can open <https://gitpod.io/#https://github.com/justintungonline/selenium-java-tests> or push the Gitpod ready-to-code button at the top of this README.
+[Gitpod](https://www.gitpod.io/features) is an online dev environment based on VS Code/Theia and can launch ready-to-code development environments for GitHub projects with a single click. It is free for open source projects like this one and a nice way to sharing code with others. You can open <https://gitpod.io/#https://github.com/justunsix/selenium-java-tests> or push the Gitpod ready-to-code button at the top of this README.
 
 This option right now is only useful for development. To run the program, a local installation is recommended since it requires a Chrome browser installed.
 
 #### Option 2. Install Locally
 
-1. Clone this repository to your local computer using `git clone https://github.com/justintungonline/selenium-java-tests.git`.
+1. Clone this repository to your local computer using `git clone https://github.com/justunsix/selenium-java-tests.git`.
 2. [Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) - Set your `JAVA_HOME` environment variable to point to Java folder and add the JDK's bin folder to your `path` environment variable.
 3. [Install Maven](https://maven.apache.org/install.html) - add Maven's bin folder to your `path` environment variable.
 4. Install [Chrome](https://www.google.com/intl/en_ca/chrome/) in the default location and the [Chrome driver](https://sites.google.com/chromium.org/driver/getting-started), making sure the versions match and add the Chrome driver binary to your `path` environment variable. [Web Driver Manager](https://github.com/bonigarcia/webdrivermanager) is an alternative and efficient way to manage this part; however, this repository does not use it as a dependency.
@@ -101,7 +101,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Justin Tung - [@justin_tung](https://twitter.com/justin_tung/)
 
-Project Link: [https://github.com/justintungonline/selenium-java-tests](https://github.com/justintungonline/selenium-java-tests)
+Project Link: [https://github.com/justunsix/selenium-java-tests](https://github.com/justunsix/selenium-java-tests)
 
 ## Acknowledgements
 

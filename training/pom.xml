@@ -9,7 +9,7 @@
   <name>training</name>
   <description>Template project to run tests with Selenium and Java</description>
   <inceptionYear>2021</inceptionYear>
-  <url>https://github.com/justintungonline/selenium-java-tests</url>
+  <url>https://github.com/justunsix/selenium-java-tests</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
