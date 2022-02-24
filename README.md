@@ -147,12 +147,8 @@ If using VS Code, ctrl+click into a class and then [right click to attach the so
     "java.configuration.runtimes": [
         {
              "name": "JavaSE-1.8",
-             "path": "C:\\usr\\bin\\Java64"
-        },
-        {
-             "name": "JavaSE-1.8",
-             "path": "C:\\usr\\bin\\\\JDK64",
-             "sources": "/usr/local/jdk-11.0.3/lib/src.zip",
+             "path": "C:\\usr\\bin\\JDK64",
+             "sources": "C:\\usr\\bin\\JDK64\\lib\\src.zip",
              "javadoc": "https://docs.oracle.com/javase/8/docs/api/",
              "default": true
         },
