@@ -10,16 +10,15 @@
 		"vscjava.vscode-java-test",
 		"redhat.java",
 		"yzhang.markdown-all-in-one",
-		"DavidAnson.vscode-markdownlint",
+		"davidanson.vscode-markdownlint",
 		"vscjava.vscode-maven",
 		"mushan.vscode-paste-image",
-		"viktorqvarfordt.vscode-pitch-black-theme",
 		"redhat.vscode-commons",
-		"SonarSource.sonarlint-vscode",
+		"sonarsource.sonarlint-vscode",
 		"ban.spellright",
-		"VisualStudioExptTeam.vscodeintellicode",
+		"visualstudioexptteam.vscodeintellicode",
 		"redhat.vscode-xml",
-		"DotJoshJohnson.xml"
+		"dotjoshjohnson.xml"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": []
