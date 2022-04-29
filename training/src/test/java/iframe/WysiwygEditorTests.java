@@ -18,6 +18,7 @@ public class WysiwygEditorTests extends BaseTests {
         String text1 = "hello ";
         String text2 = "world";
 
+        editorPage.clearTextArea();
         editorPage.setTextArea(text1);
         editorPage.decreaseIndent();
         editorPage.setTextArea(text2);
