@@ -26,19 +26,19 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-chrome-driver</artifactId>
-      <version>4.9.1</version>
+      <version>4.10.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit-driver -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>htmlunit-driver</artifactId>
-      <version>4.9.1</version>
+      <version>4.10.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-support</artifactId>
-      <version>4.9.1</version>
+      <version>4.10.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
@@ -69,7 +69,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.1.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -90,7 +90,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.4.4</version>
+          <version>3.4.5</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
