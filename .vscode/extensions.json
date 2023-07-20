@@ -6,7 +6,6 @@
 		"shengchen.vscode-checkstyle",
 		"vscjava.vscode-java-debug",
 		"vscjava.vscode-java-dependency",
-		"vscjava.vscode-java-pack",
 		"vscjava.vscode-java-test",
 		"redhat.java",
 		"yzhang.markdown-all-in-one",
@@ -18,7 +17,9 @@
 		"ban.spellright",
 		"visualstudioexptteam.vscodeintellicode",
 		"redhat.vscode-xml",
-		"dotjoshjohnson.xml"
+		"dotjoshjohnson.xml",
+		"visualstudioexptteam.intellicode-api-usage-examples",
+		"vscjava.vscode-java-pack"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": []
