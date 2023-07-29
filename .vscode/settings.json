@@ -3,5 +3,6 @@
     // Sonarlint: selenium-java-tests project binding
     "sonarlint.connectedMode.project": {
         "projectKey": "selenium-java-tests"
-    }
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
 }

@@ -196,9 +196,9 @@ public class AppExample {
         WebElement iWontChangeLink = driver.findElement(By.partialLinkText("i-wont-change"));
 
         // Wait until load for slow element loading
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement testingLink = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Testing")));
+        // WebDriverWait wait = new WebDriverWait(driver, 10);
+        // WebElement testingLink = wait.until(
+        //         ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Testing")));
 
 
         /*
