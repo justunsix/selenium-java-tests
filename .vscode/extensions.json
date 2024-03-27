@@ -20,7 +20,8 @@
 		"dotjoshjohnson.xml",
 		"visualstudioexptteam.intellicode-api-usage-examples",
 		"vscjava.vscode-java-pack",
-		"github.copilot-chat"
+		"github.copilot-chat",
+		"DotJoshJohnson.xml"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": []
