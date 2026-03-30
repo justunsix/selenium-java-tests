@@ -38,12 +38,14 @@ local installation is recommended since it requires a Chrome browser installed.
 
 1. Clone this repository to your local computer using
    `git clone https://github.com/justunsix/selenium-java-tests.git`.
-2. [Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) -
-   Set your `JAVA_HOME` environment variable to point to Java folder and add the
-   JDK's bin folder to your `path` environment variable.
-3. [Install Maven](https://maven.apache.org/install.html) - add Maven's bin
+2. [Install Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html)
+
+- Set your `JAVA_HOME` environment variable to point to Java folder and add the
+  JDK's bin folder to your `path` environment variable.
+
+1. [Install Maven](https://maven.apache.org/install.html) - add Maven's bin
    folder to your `path` environment variable.
-4. Install [Chrome](https://www.google.com/intl/en_ca/chrome/) in the default
+2. Install [Chrome](https://www.google.com/intl/en_ca/chrome/) in the default
    location and the
    [Chrome driver](https://sites.google.com/chromium.org/driver/getting-started),
    making sure the versions match and add the Chrome driver binary to your
