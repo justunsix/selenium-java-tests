@@ -8,7 +8,6 @@
   <version>1.0-SNAPSHOT</version>
   <name>training</name>
   <description>Template project to run tests with Selenium and Java</description>
-  <url>http://www.example.com</url>
   <url>https://github.com/justunsix/selenium-java-tests</url>
 
   <properties>
@@ -17,56 +16,42 @@
     <sonar.projectKey>justintungonline_selenium-java-tests</sonar.projectKey>
     <sonar.organization>swiftiris</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url> 
+    <selenium.version>4.41.0</selenium.version>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>5.11.0</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-      <dependency>
-          <groupId>org.seleniumhq.selenium</groupId>
-          <artifactId>selenium-chrome-driver</artifactId>
-          <version>4.41.0</version>
-        </dependency>
-      <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit3-driver -->
-      <dependency>
+  <dependencies>
+    <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+    <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>htmlunit3-driver</artifactId>
+        <artifactId>selenium-java</artifactId>
+        <version>${selenium.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-chrome-driver</artifactId>
         <version>4.41.0</version>
-      </dependency>
-      <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
-      <dependency>
-          <groupId>org.seleniumhq.selenium</groupId>
-          <artifactId>selenium-support</artifactId>
-          <version>4.41.0</version>
-          <scope>compile</scope>
-      </dependency>
-      <!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
-      <dependency>
-          <groupId>org.testng</groupId>
-          <artifactId>testng</artifactId>
-          <version>7.12.0</version>
-          <scope>test</scope>
-      </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
     </dependency>
-    <!-- Optionally: parameterized tests support -->
+    <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit3-driver -->
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
-      <scope>test</scope>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>htmlunit3-driver</artifactId>
+      <version>4.41.0</version>
     </dependency>
-    </dependencies>
-  </dependencyManagement>
+    <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-support</artifactId>
+        <version>4.41.0</version>
+        <scope>compile</scope>
+    </dependency>
+    <!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.12.0</version>
+        <scope>test</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

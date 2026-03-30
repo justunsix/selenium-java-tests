@@ -151,7 +151,7 @@ Project Link:
 Initialize project in this repository's folder using a Maven quickstart template
 
 ```sh
-mvn archetype:generate -DgroupId=training -DartifactId=training -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+mvn archetype:generate -DgroupId=training -DartifactId=training -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
 ```
 
 Add [Selenium's dependency](https://www.selenium.dev/maven/) to Maven's pom.

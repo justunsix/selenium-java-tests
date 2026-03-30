@@ -1,3 +1,4 @@
 [tools]
 maven = "latest"
 java = "25"
+chromedriver = "latest"
