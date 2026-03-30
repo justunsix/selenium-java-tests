@@ -12,8 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import utils.WindowManager;
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class BaseTests {
 
@@ -70,13 +70,10 @@ public class BaseTests {
          * Wait at most the time in the arguments for elements to load and if present, interact with
          * them
          */
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         /* Wait at most the time for page loads before throwing exceptions */
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-
-        /* Wait at most the time for asynchronous scripts like JavaScript */
-        driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
     }
 
     @BeforeMethod
