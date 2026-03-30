@@ -2,3 +2,9 @@
 maven = "latest"
 java = "25"
 chromedriver = "latest"
+
+[tasks.build]
+run = "cd training && mvn package"
+
+[tasks.compile]
+run = "cd training && mvn compile"
