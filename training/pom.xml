@@ -13,7 +13,7 @@
     <sonar.projectKey>justintungonline_selenium-java-tests</sonar.projectKey>
     <sonar.organization>swiftiris</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <selenium.version>4.41.0</selenium.version>
+    <selenium.version>4.43.0</selenium.version>
   </properties>
   <dependencies>
     <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
@@ -25,7 +25,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-chrome-driver</artifactId>
-      <version>4.41.0</version>
+      <version>4.43.0</version>
     </dependency>
     <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit3-driver -->
     <dependency>
@@ -37,7 +37,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-support</artifactId>
-      <version>4.41.0</version>
+      <version>4.43.0</version>
       <scope>compile</scope>
     </dependency>
     <!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
@@ -76,7 +76,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
-          <version>3.1.2</version>
+          <version>3.1.4</version>
         </plugin>
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
