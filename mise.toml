@@ -8,3 +8,9 @@ run = "cd training && mvn package"
 
 [tasks.compile]
 run = "cd training && mvn compile"
+
+[tasks.update-display-dependency-updates]
+run = "cd training && mvn versions:display-dependency-updates"
+
+[tasks.update-use-latest-releases]
+run = "cd training && mvn versions:use-latest-releases"
